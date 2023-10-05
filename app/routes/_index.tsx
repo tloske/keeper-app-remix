@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import Note from "~/components/Note";
+import notes from "../notes.json";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,21 +12,11 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
-      <Note title="title" content="content" />
+      {notes.map((note) => {
+        return (
+          <Note key={note.title} title={note.title} content={note.content} />
+        );
+      })}
     </div>
   );
 }
