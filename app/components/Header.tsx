@@ -1,9 +1,12 @@
+import { Highlight } from "@mui/icons-material";
+
 export default function Header() {
   return (
     <header>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
+            <Highlight />
             Keeper
           </a>
           <button

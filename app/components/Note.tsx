@@ -1,3 +1,5 @@
+import { Delete } from "@mui/icons-material";
+
 export default function Note(props: any) {
   return (
     <div className="note">
@@ -8,7 +10,7 @@ export default function Note(props: any) {
           props.onClick(props.id);
         }}
       >
-        DELETE
+        <Delete />
       </button>
     </div>
   );
